@@ -4,9 +4,37 @@ $(document).ready(function(){
     event.preventDefault();
 
     var dice = Math.floor(Math.random() * 6) + 1
-    console.log(dice)
+    dices.push(dice)
+
+
+      if (dices[dices.length -1] == 1) {
+        dices = []
+      } else {
+      }
+
+      console.log(dices)
+
+
 })
+  $("#hold").click(function(event) {
+    event.preventDefault();
+
+    console.log(dices);
+
+    sum = 0
+
+    for (var i = 0; i<dices.length; i++) {
+      sum = dices[i] + sum
+    }
+
+    console.log(sum)
+  })
 });
+
+dices = []
+
+
+
   //   var firstName = $("#firstName").val();
   //   var lastName = $("#lastName").val();
   //   var phoneNumber = $("#phoneNumber").val();
